@@ -1,4 +1,4 @@
-extension ParseNumberToPrice on int? {
+extension ParseNumberToPrice on num? {
   String parseNumberToPrice({String char = ','}) {
     var price = this?.toInt();
     if (price == null || price == 0) {
