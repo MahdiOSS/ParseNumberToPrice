@@ -1,7 +1,5 @@
-import 'package:flutter/material.dart';
-
 extension ParseNumberToPrice on int? {
-  String parseNumberToPrice() {
+  String parseNumberToPrice({String char = ','}) {
     var price = this?.toInt();
     if (price == null || price == 0) {
       return '0';
@@ -21,7 +19,7 @@ extension ParseNumberToPrice on int? {
 
     for (var i = 0; i < characters.length; i++) {
       if (i % 3 == 0) {
-        fixPrice += ',';
+        fixPrice += char;
       }
       fixPrice += characters[i];
     }
@@ -31,4 +29,3 @@ extension ParseNumberToPrice on int? {
     return fixPrice;
   }
 }
-
