@@ -32,14 +32,3 @@ extension ParseNumberToPrice on int? {
   }
 }
 
-extension RemoveSpaceFromText on String? {
-  String removeSpace() {
-    if(this == null)
-      return '';
-    String fix = '';
-    for (var value in this!.characters) {
-      if (value.isNotEmpty) fix += value;
-    }
-    return fix;
-  }
-}
